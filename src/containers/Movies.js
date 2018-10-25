@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import MovieCard from '../components/MovieCard';
 import MovieForm from './MovieForm';
+import { connect } from 'react-redux';
+import { getMovies } from '../actions/movies';
 
 class Movies extends Component {
+
+  componentDidMount() {
+    this.props.getMovies();
+  }
+
   render() {
     return (
       <div>
@@ -14,4 +21,10 @@ class Movies extends Component {
   }
 }
 
-export default Movies;
+const mapStateToProps = (state) => {
+  return ({
+    movies: state.movies
+  })
+}
+
+export default connect(mapStateToProps, { getMovies })(Movies);
