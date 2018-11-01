@@ -16,6 +16,7 @@ class MovieForm extends Component {
   handleOnSubmit = event => {
     event.preventDefault()
     this.props.createMovie(this.props.movieFormData)
+    .then(this.props.resetMovieForm)
   }
 
 
