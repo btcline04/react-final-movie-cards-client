@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MovieCard from '../components/MovieCard';
-import MovieForm from './MovieForm';
 import { connect } from 'react-redux';
 import { getMovies } from '../actions/movies';
 
@@ -15,7 +14,6 @@ class Movies extends Component {
       <div>
         <h1>Movies</h1>
         {this.props.movies.map(movie => <MovieCard key={movie.id} movie={movie} />)}
-        <MovieForm />
       </div>
     )
   }

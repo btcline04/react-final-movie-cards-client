@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 import Movies from './Movies';
+import MovieForm from './MovieForm';
+import NavBar from '../components/NavBar';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 
 class App extends Component {
-  render() {
+render() {
     return (
-      <div className="App">
-        <Movies />
-      </div>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Route exact path="/" component={Movies} />
+          <Route exact path="/new" component={MovieForm} />
+        </div>
+      </Router>
     );
   }
 }

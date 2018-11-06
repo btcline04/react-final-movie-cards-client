@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunk from 'redux-thunk';
 import movies from './reducers/movies';
 import movieFormData from './reducers/movieFormData';
@@ -8,10 +8,12 @@ const reducers = combineReducers({
   movieFormData
 });
 
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+
 const middleware = [thunk];
 
 export default createStore(
   reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(...middleware),
+  composeEnhancer(applyMiddleware(...middleware)),
 );
