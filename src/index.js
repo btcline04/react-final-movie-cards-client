@@ -5,6 +5,7 @@ import './index.css';
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store.js';
+import 'materialize-css/dist/css/materialize.min.css'
 
 ReactDOM.render(
   <Provider store={store}>

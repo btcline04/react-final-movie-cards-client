@@ -23,31 +23,48 @@ class MovieForm extends Component {
   render() {
     const { title, plot_summary, img_url, run_time } = this.props.movieFormData;
     return (
-      <div>
-        <h2>Add A Movie:</h2>
-        <form onSubmit={this.handleOnSubmit}>
-          <div>
-            <label htmlFor="title">Title:</label>
-            <input type="text" name="title" value={title} onChange = {this.handleOnChange} />
-          </div>
+      // <div className="row">
+      //   <h5>Add A Movie</h5>
+      //   <form className="col s6 center container" onSubmit={this.handleOnSubmit}>
+      //   </form>
+      // </div>
 
-          <div>
-            <label htmlFor="plot_summary">Plot Summary:</label>
-            <input type="text" name="plot_summary" value={plot_summary} onChange = {this.handleOnChange} />
-          </div>
+      <div class="valign-wrapper row login-box">
+        <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+          <form>
+            <div class="card-content">
+              <span class="card-title">Add A Movie</span>
+                <div class="row">
 
-          <div>
-            <label htmlFor="img_url">Poster URL:</label>
-            <input type="text" name="img_url" value={img_url} onChange = {this.handleOnChange} />
-          </div>
+                  <div class="input-field col s12">
+                    <label htmlFor="title" className="active">Title:</label>
+                    <input type="text" name="title" value={title} onChange = {this.handleOnChange} />
+                  </div>
 
-          <div>
-            <label htmlFor="run_time">Run Time:</label>
-            <input type="number" name="run_time" value={run_time} onChange = {this.handleOnChange}  />
-          </div>
+                  <div class="input-field col s12">
+                    <label htmlFor="plot_summary" className="active">Plot Summary:</label>
+                    <input type="text" name="plot_summary" value={plot_summary} onChange = {this.handleOnChange} />
+                  </div>
 
-          <button type="submit">Add Movie</button>
-        </form>
+                  <div class="input-field col s12">
+                    <label htmlFor="img_url" className="active">Poster URL:</label>
+                    <input type="text" name="img_url" value={img_url} onChange = {this.handleOnChange} />
+                  </div>
+
+                  <div class="input-field col s12">
+                    <label htmlFor="run_time" className="active">Run Time:</label>
+                    <input type="number" name="run_time" value={run_time} onChange = {this.handleOnChange}  />
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="card-action center-align">
+              <button type="submit" className="btn waves-effect waves-light" >Add Movie <i class="material-icons right">send</i> </button>
+            </div>
+
+          </form>
+        </div>
       </div>
     );
   }

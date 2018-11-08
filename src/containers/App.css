@@ -26,3 +26,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.center {
+  text-align: center;
+}
+
+.form {
+  width: 300px;
+  margin: 0 auto;
+}
