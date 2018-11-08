@@ -10,7 +10,7 @@ class App extends Component {
 render() {
     return (
       <Router>
-        <div className="App">
+        <div>
           <NavBar />
           <Route exact path="/" component={Movies} />
           <Route exact path="/new" component={MovieForm} />
