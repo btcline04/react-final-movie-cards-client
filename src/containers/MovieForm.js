@@ -23,11 +23,6 @@ class MovieForm extends Component {
   render() {
     const { title, plot_summary, img_url, run_time } = this.props.movieFormData;
     return (
-      // <div className="row">
-      //   <h5>Add A Movie</h5>
-      //   <form className="col s6 center container" onSubmit={this.handleOnSubmit}>
-      //   </form>
-      // </div>
 
       <div class="valign-wrapper row login-box">
         <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
