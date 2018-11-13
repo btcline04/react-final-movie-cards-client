@@ -11,8 +11,8 @@ class Movies extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Movies</h1>
+      <div className="App">
+        <h1 className="boldText">Movies</h1>
         {this.props.movies.map(movie => <MovieCard key={movie.id} movie={movie} />)}
       </div>
     )
